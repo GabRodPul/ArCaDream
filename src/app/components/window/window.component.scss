@@ -1,0 +1,21 @@
+@import '../../../styles';
+
+.window {
+    border: solid 8px;
+    border-radius: 10px;
+    border-color: map-get($default-colors, "space-cadet");
+    
+    margin: auto auto;
+    font-size: 16px;
+    
+    background-color: map-get($default-colors, "space-cadet");
+}
+
+.outer-window {
+    border: solid 8px;
+    border-radius: 15px;
+    border-color: map-get($default-colors, "slate-blue");
+    
+    margin: auto 10%;
+    background-color: map-get($default-colors, "slate-blue");
+}

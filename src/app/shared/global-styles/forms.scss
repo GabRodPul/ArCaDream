@@ -1,0 +1,45 @@
+@import './colors';
+
+.form-field {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form * {
+    font-family: "Dongle", Arial,  "Helvetica Neue", sans-serif;
+    color: map-get($default-colors, "gainsboro");
+  }
+  
+  .form-label {
+    width: max-content;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    
+    font-weight: bold;
+  
+    background-color: map-get($default-colors, "slate-blue");
+  }
+  
+  textarea {
+    resize: none;
+  }
+
+  input, textarea {
+    border: solid 8px;
+    border-radius: 0px 10px 10px 10px;
+    border-color: map-get($default-colors, "slate-blue");
+    
+    min-width: 150%;
+
+    font-size: 20px;
+
+    background-color: map-get($default-colors, "space-cadet");
+  }
+  

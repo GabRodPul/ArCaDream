@@ -1,0 +1,7 @@
+<button *ngIf="logged" mat-button [routerLink]="routeUrl">
+    <mat-icon *ngIf="!isAppInRoute" [svgIcon]="uncheckedIcon" class="material-icons"></mat-icon>
+    <mat-icon *ngIf="isAppInRoute" [svgIcon]="checkedIcon" class="material-icons"></mat-icon>
+</button>
+<button *ngIf="!logged" mat-button (click)="warningNotLogged()">
+    <mat-icon [svgIcon]="uncheckedIcon" class="material-icons"></mat-icon>
+</button>

@@ -1,0 +1,39 @@
+<form (ngSubmit)="submit()" #userForm="ngForm">
+    <div class="form-field">
+        <div class="form-label">
+            <label for="contactForm">Nombre completo</label>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="contactForm.fullname" name="fullname" #fullname="ngModel" required>
+        </div>
+        <div *ngIf="fullname.invalid || fullname.dirty" class="alert">
+            <div *ngIf="fullname.errors?.['required']">Campo requerido</div>
+        </div>
+    </div>
+    <div class="form-field">
+        <div class="form-label">
+            <label for="contactForm">Dirección de correo</label>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="contactForm.email" name="email" #email="ngModel" required>
+        </div>
+        <div *ngIf="email.invalid || email.dirty" class="alert">
+            <div *ngIf="email.errors?.['required']">Campo requerido</div>
+        </div>
+    </div>
+    <div class="form-field">
+        <div class="form-label">
+            <label for="contactForm">Motivo</label>
+        </div>
+        <div>
+            <textarea rows="5"  [(ngModel)]="contactForm.reason" name="reason" #reason="ngModel" required></textarea>
+        </div>
+        <div *ngIf="reason.invalid || reason.dirty" class="alert">
+            <div *ngIf="reason.errors?.['required']">Campo requerido</div>
+        </div>
+    </div>
+    <button type="submit" class="stylized-button" routerLink="/about-us/contact">
+        <mat-icon svgIcon="sobre" class="material-icons"></mat-icon>
+        <span class="button-text">Contáctenos</span>
+    </button>
+</form>

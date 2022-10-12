@@ -1,0 +1,11 @@
+$default-colors: (
+    "space-cadet" : #17183Bff,
+    "oxford-blue" : #101D42ff,
+    "slate-blue"  : #6564DBff,
+    "gainsboro"   : #DADADAff
+);
+
+mat-icon {
+    transform: scale(1.30);
+    fill: map-get($default-colors, 'gainsboro');
+}

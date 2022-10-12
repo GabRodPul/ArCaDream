@@ -1,0 +1,21 @@
+@import '../../../styles';
+
+header {
+    position: sticky;
+    height: 55px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+
+    font-family: "Dongle", Arial, "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: map-get($default-colors, "gainsboro");
+    background-color: map-get($default-colors, "slate-blue");
+}
